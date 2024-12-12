@@ -67,3 +67,30 @@ export const info = [
     title: "Rainy day resilience.",
   },
 ];
+
+export const navItems = [
+  {
+    title: "What is Mempool API Terminal?",
+    link: "#what-is-mempool-api-terminal",
+  },
+  {
+    title: "Key Features",
+    link: "#key-features",
+  },
+  {
+    title: "Platform Architecture",
+    link: "#platform-architecture",
+  },
+  {
+    title: "Platform Components",
+    link: "#platform-components",
+  },
+  {
+    title: "Available Networks",
+    link: "#available-networks",
+  },
+  {
+    title: "Ready to Get Started?",
+    link: "#get-started",
+  },
+];
