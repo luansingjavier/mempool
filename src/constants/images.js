@@ -69,6 +69,7 @@ import clone1 from "../assets/images/clone1.png";
 import clone2 from "../assets/images/clone2.png";
 import clone3 from "../assets/images/clone3.png";
 import clone4 from "../assets/images/clone4.png";
+import clone5 from "../assets/images/clone5.png";
 
 export {
   logo,
@@ -133,4 +134,5 @@ export {
   clone2,
   clone3,
   clone4,
+  clone5,
 };

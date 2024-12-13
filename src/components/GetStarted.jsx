@@ -25,6 +25,7 @@ import {
   clone2,
   clone3,
   clone4,
+  clone5,
 } from "../constants/images";
 
 const GetStarted = () => (
@@ -315,6 +316,15 @@ const GetStarted = () => (
         Run the program python run.py
         <img
           src={clone4}
+          alt=""
+          className={`w-full sm:w-full md:w-1/3 md:top-20 right-0 mb-5 mt-5`}
+        />
+      </li>
+      <li className="font-normal text-[16px] text-n-4 my-5">
+        The program will ask for a Bitcoin address.
+        <p> Enter: 1XLa6PPsSShq7F8JTEa2DD6boZxzWSL1n</p>
+        <img
+          src={clone5}
           alt=""
           className={`w-full sm:w-full md:w-1/3 md:top-20 right-0 mb-5 mt-5`}
         />
