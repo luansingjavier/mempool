@@ -71,6 +71,16 @@ import clone3 from "../assets/images/clone3.png";
 import clone4 from "../assets/images/clone4.png";
 import clone5 from "../assets/images/clone5.png";
 
+import install_python from "../assets/images/install-python.png";
+import install_git from "../assets/images/install-git.png";
+import install_github_cli from "../assets/images/install-github-cli.png";
+import check_python_version from "../assets/images/check-python-version.png";
+import check_git_version from "../assets/images/check-git-version.png";
+import clone_repo from "../assets/images/clone-repo.png";
+import clone_from_terminal from "../assets/images/clone-from-terminal.png";
+import install_dependencies from "../assets/images/install-dependencies.png";
+import running from "../assets/images/running.png";
+
 export {
   logo,
   main,
@@ -135,4 +145,13 @@ export {
   clone3,
   clone4,
   clone5,
+  install_python,
+  install_git,
+  install_github_cli,
+  check_python_version,
+  check_git_version,
+  clone_repo,
+  clone_from_terminal,
+  install_dependencies,
+  running,
 };
