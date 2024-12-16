@@ -77,7 +77,7 @@ const PlatfromComponents = () => (
       {getProcessingDataCode}
     </SyntaxHighlighter>
     <span className="font-normal text-[16px] text-n-4 my-5">
-      #It iterates through raw_data, checking if each transaction contains keys
+      It iterates through raw_data, checking if each transaction contains keys
       for "txid" and "status", and further ensures "block_height" and
       "block_time" are present in the "status" dictionary. Within this context,
       it prepares to extract transaction details such as txid, block_height, and
@@ -91,16 +91,14 @@ const PlatfromComponents = () => (
     >
       {getTransactionCode}
     </SyntaxHighlighter>
-    <ul className="list-disc pl-6 mt-2 space-y-2">
-      <li className="font-normal text-[16px] text-n-4 my-5">
-        #For each input, it checks for a scriptpubkey_address in prevout and
-        appends it to input_addresses, while also recording the value sent by
-        user_address. Similarly, for each output, it checks for a
-        scriptpubkey_address and appends it to output_addresses, recording the
-        value received by user_address. This effectively tracks addresses and
-        amounts associated with the user's transactions.
-      </li>
-    </ul>
+    <span className="font-normal text-[16px] text-n-4 my-5">
+      For each input, it checks for a scriptpubkey_address in prevout and
+      appends it to input_addresses, while also recording the value sent by
+      user_address. Similarly, for each output, it checks for a
+      scriptpubkey_address and appends it to output_addresses, recording the
+      value received by user_address. This effectively tracks addresses and
+      amounts associated with the user's transactions.
+    </span>
     <SyntaxHighlighter
       language="python"
       style={okaidia}
@@ -109,7 +107,7 @@ const PlatfromComponents = () => (
       {getPriceDataCode}
     </SyntaxHighlighter>
     <span className="font-normal text-[16px] text-n-4 my-5">
-      #Extracts the BTC/USD price from the first element of the price_data list,
+      Extracts the BTC/USD price from the first element of the price_data list,
       defaulting to "N/A" if the list is empty. The result is stored in the
       variable btc_usd_price
     </span>
@@ -121,7 +119,7 @@ const PlatfromComponents = () => (
       {getProcessedDataCode}
     </SyntaxHighlighter>
     <span className="font-normal text-[16px] text-n-4 my-5">
-      #Appends a dictionary to processed_data for each transaction, summarizing
+      Appends a dictionary to processed_data for each transaction, summarizing
       key details: Transaction Hash, Block Index, block_time, received and sent
       amounts (denominated in Bitcoin instead of sats), and the BTC/USD price
       (formatted as a currency). If no values are available for received_amount
@@ -138,16 +136,14 @@ const PlatfromComponents = () => (
     >
       {getConvertToDataCode}
     </SyntaxHighlighter>
-    <ul className="list-disc pl-6 mt-2 mb-4">
-      <li className="font-normal text-[16px] text-n-4 my-5">
-        #Calculates final balances and prepares data for conversion into a
-        DataFrame. It computes total_received and total_sent by summing
-        transaction amounts from processed_data, accommodating both string and
-        list formats. The confirmed_balance is derived by subtracting total_sent
-        from total_received, while the timestamp records the current UTC time in
-        a formatted string.
-      </li>
-    </ul>
+    <span className="font-normal text-[16px] text-n-4 my-5 ">
+      Calculates final balances and prepares data for conversion into a
+      DataFrame. It computes total_received and total_sent by summing
+      transaction amounts from processed_data, accommodating both string and
+      list formats. The confirmed_balance is derived by subtracting total_sent
+      from total_received, while the timestamp records the current UTC time in a
+      formatted string.
+    </span>
     <SyntaxHighlighter
       language="python"
       style={okaidia}
@@ -156,7 +152,7 @@ const PlatfromComponents = () => (
       {getSummaryDataCode}
     </SyntaxHighlighter>
     <span className="font-normal text-[16px] text-n-4 my-5 ">
-      #Creates two DataFrames: summary_df for a high-level summary of the user's
+      Creates two DataFrames: summary_df for a high-level summary of the user's
       transactions and transactions_df for detailed transaction data. The
       summary_data dictionary stores labels and corresponding values like the
       user's address, timestamp, total amounts, confirmed balance, live BTC/USD
