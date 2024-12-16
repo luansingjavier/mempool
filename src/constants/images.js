@@ -81,6 +81,17 @@ import clone_from_terminal from "../assets/images/clone-from-terminal.png";
 import install_dependencies from "../assets/images/install-dependencies.png";
 import running from "../assets/images/running.png";
 
+import getTransactionDataCode from "../assets/images/getTransactionDataCode.png";
+import getPriceLogCode from "../assets/images/getPriceLogCode.png";
+import getLivePriceCode from "../assets/images/getLivePriceCode.png";
+import getProcessingDataCode from "../assets/images/getProcessingDataCode.png";
+import getTransactionCode from "../assets/images/getTransactionCode.png";
+import getPriceDataCode from "../assets/images/getPriceDataCode.png";
+import getProcessedDataCode from "../assets/images/getProcessedDataCode.png";
+import getConvertToDataCode from "../assets/images/getConvertToDataCode.png";
+import getSummaryDataCode from "../assets/images/getSummaryDataCode.png";
+import getSaveToXlsxCode from "../assets/images/getSaveToXlsxCode.png";
+
 export {
   logo,
   main,
@@ -154,4 +165,14 @@ export {
   clone_from_terminal,
   install_dependencies,
   running,
+  getTransactionDataCode,
+  getPriceLogCode,
+  getLivePriceCode,
+  getProcessingDataCode,
+  getTransactionCode,
+  getPriceDataCode,
+  getProcessedDataCode,
+  getConvertToDataCode,
+  getSummaryDataCode,
+  getSaveToXlsxCode,
 };
