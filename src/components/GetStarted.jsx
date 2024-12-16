@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   install_python,
   install_git,
@@ -11,13 +11,20 @@ import {
   running,
 } from "../constants/images";
 import SyntaxHighlighter from "react-syntax-highlighter";
-import { FiCopy } from "react-icons/fi";
+import { FiCopy, FiCheck } from "react-icons/fi";
 import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 const GetStarted = () => {
-  const handleCopy = (code) => {
+  const [copied, setCopied] = useState(null);
+
+  const handleCopy = (code, index) => {
     navigator.clipboard.writeText(code);
+    setCopied(index);
+    setTimeout(() => {
+      setCopied(null);
+    }, 5000);
   };
+
   return (
     <section id="installing-the-application" className="mb-6 scroll-mt-32">
       <h2 className="h2 flex items-center text-center justify-between text-gradient mb-4 hover: transition duration-300 transform hover:translate-y-[-4px]">
@@ -86,11 +93,15 @@ const GetStarted = () => {
               python --version
             </SyntaxHighlighter>
             <button
-              onClick={() => handleCopy("python --version")}
+              onClick={() => handleCopy("python --version", 0)}
               className="absolute top-3.5 right-2 p-2 rounded bg-gray-700 text-white hover:bg-gray-600 transition z-1"
               aria-label="Copy code"
             >
-              <FiCopy className="w-3 h-3" size={20} />
+              {copied === 0 ? (
+                <FiCheck className="w-3 h-3 text-blue-400" size={20} />
+              ) : (
+                <FiCopy className="w-3 h-3" size={20} />
+              )}
             </button>
           </div>
           <img
@@ -106,11 +117,15 @@ const GetStarted = () => {
               git --version
             </SyntaxHighlighter>
             <button
-              onClick={() => handleCopy("git --version")}
+              onClick={() => handleCopy("git --version", 1)}
               className="absolute top-3.5 right-2 p-2 rounded bg-gray-700 text-white hover:bg-gray-600 transition z-1"
               aria-label="Copy code"
             >
-              <FiCopy className="w-3 h-3" size={20} />
+              {copied === 1 ? (
+                <FiCheck className="w-3 h-3 text-blue-400" size={20} />
+              ) : (
+                <FiCopy className="w-3 h-3" size={20} />
+              )}
             </button>
           </div>
           <img
@@ -138,13 +153,18 @@ const GetStarted = () => {
             <button
               onClick={() =>
                 handleCopy(
-                  "gh repo clone madame-president/mempool-api-terminal"
+                  "gh repo clone madame-president/mempool-api-terminal",
+                  2
                 )
               }
               className="absolute top-3.5 right-2 p-2 rounded bg-gray-700 text-white hover:bg-gray-600 transition z-1"
               aria-label="Copy code"
             >
-              <FiCopy className="w-3 h-3" size={20} />
+              {copied === 2 ? (
+                <FiCheck className="w-3 h-3 text-blue-400" size={20} />
+              ) : (
+                <FiCopy className="w-3 h-3" size={20} />
+              )}
             </button>
           </div>
           <img
@@ -168,11 +188,15 @@ const GetStarted = () => {
               cd mempool-api-terminal
             </SyntaxHighlighter>
             <button
-              onClick={() => handleCopy("cd mempool-api-terminal")}
+              onClick={() => handleCopy("cd mempool-api-terminal", 3)}
               className="absolute top-3.5 right-2 p-2 rounded bg-gray-700 text-white hover:bg-gray-600 transition z-1"
               aria-label="Copy code"
             >
-              <FiCopy className="w-3 h-3" size={20} />
+              {copied === 3 ? (
+                <FiCheck className="w-3 h-3 text-blue-400" size={20} />
+              ) : (
+                <FiCopy className="w-3 h-3" size={20} />
+              )}
             </button>
           </div>
         </li>
@@ -183,11 +207,15 @@ const GetStarted = () => {
               pip install -r requirements.txt
             </SyntaxHighlighter>
             <button
-              onClick={() => handleCopy("pip install -r requirements.txt")}
+              onClick={() => handleCopy("pip install -r requirements.txt", 4)}
               className="absolute top-3.5 right-2 p-2 rounded bg-gray-700 text-white hover:bg-gray-600 transition z-1"
               aria-label="Copy code"
             >
-              <FiCopy className="w-3 h-3" size={20} />
+              {copied === 4 ? (
+                <FiCheck className="w-3 h-3 text-blue-400" size={20} />
+              ) : (
+                <FiCopy className="w-3 h-3" size={20} />
+              )}
             </button>
           </div>
           <img
@@ -203,11 +231,15 @@ const GetStarted = () => {
               python run.py
             </SyntaxHighlighter>
             <button
-              onClick={() => handleCopy("python run.py")}
+              onClick={() => handleCopy("python run.py", 5)}
               className="absolute top-3.5 right-2 p-2 rounded bg-gray-700 text-white hover:bg-gray-600 transition z-1"
               aria-label="Copy code"
             >
-              <FiCopy className="w-3 h-3" size={20} />
+              {copied === 5 ? (
+                <FiCheck className="w-3 h-3 text-blue-400" size={20} />
+              ) : (
+                <FiCopy className="w-3 h-3" size={20} />
+              )}
             </button>
           </div>
           and enter your Bitcoin address when prompted. The application will
